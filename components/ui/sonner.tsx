@@ -6,7 +6,7 @@ import "@/app/globals.css"
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "dark" } = useTheme()
+  const { theme = "system" } = useTheme()
 
   return (
     <Sonner
