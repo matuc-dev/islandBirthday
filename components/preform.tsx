@@ -21,10 +21,13 @@ export const PreForm = () => {
 
   const send = async () => {
     await axios.post(webhookUrl, postData);
-    toast("Send your request", {
-      icon: <BadgeCheck size={20} />,
-      style: { background: "#09090b", color: "#fff", gap: "10px" },
-    })
+    toast("Sent!", {
+        description: "Successfully sent message!",
+        action: {
+          label: "Close",
+          onClick: () => console.log('close'),
+        },
+      })
   }
 
   
