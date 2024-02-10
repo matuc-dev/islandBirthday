@@ -26,6 +26,12 @@ export default function RootLayout({
             disableTransitionOnChange
           >
         {children}
+        toast.custom((t) => (
+  <div>
+    <h1>Custom toast</h1>
+     <button onClick={() => toast.dismiss(t)}>Dismiss</button>
+  </div>
+));
         <Toaster />
       </ThemeProvider>
       </body>
